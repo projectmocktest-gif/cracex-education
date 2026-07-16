@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Drop shadow filter for professional 3D effect -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0d3b66" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Base Circle Background -->
+  <circle cx="250" cy="250" r="230" fill="#ffffff" stroke="#0d3b66" stroke-width="12" filter="url(#shadow)" />
+
+  <!-- Top Blue Curved Banner -->
+  <path d="M 80,180 A 230,230 0 0 1 420,180 A 185,185 0 0 0 80,180 Z" fill="#0d3b66" />
+
+  <!-- Icons inside the Top Banner -->
+  <!-- 1. Sparkle on Left -->
+  <path d="M 130,90 Q 130,110 110,110 Q 130,110 130,130 Q 130,110 150,110 Q 130,110 130,90 Z" fill="#ffffff" />
+
+  <!-- 2. Open Book in Center -->
+  <path d="M 225,95 Q 237,90 250,95 Q 263,90 275,95 L 275,75 Q 263,70 250,75 Q 237,70 225,75 Z" fill="#ffffff" />
+  <path d="M 250,75 L 250,95" stroke="#0d3b66" stroke-width="2" />
+
+  <!-- 3. Lightbulb on Right -->
+  <path d="M 370,95 A 13,13 0 0 1 380,115 L 378,121 H 362 L 360,115 A 13,13 0 0 1 370,95 Z" fill="#ffffff" />
+  <rect x="364" y="123" width="12" height="3" rx="1" fill="#ffffff" />
+  <rect x="366" y="128" width="8" height="2" rx="1" fill="#ffffff" />
+  <!-- Rays -->
+  <line x1="370" y1="78" x2="370" y2="84" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="348" y1="100" x2="354" y2="103" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <line x1="392" y1="100" x2="386" y2="103" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <line x1="352" y1="118" x2="346" y2="122" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <line x1="388" y1="118" x2="394" y2="122" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Left Blue Sweep Accent -->
+  <path d="M 125,210 C 95,270 120,320 200,335 C 150,315 125,270 135,220 Z" fill="#0d3b66" />
+
+  <!-- Dynamic Sweeping Orange Arrow wrapping books -->
+  <path d="M 130,260 Q 150,330 250,335 Q 350,330 380,210 L 395,225 L 390,185 L 350,195 L 368,210 Q 340,310 250,315 Q 165,310 145,260 Z" fill="#ee964b" />
+
+  <!-- Graduation Cap (Mortarboard) -->
+  <polygon points="250,150 340,180 250,210 160,180" fill="#0d3b66" stroke="#ffffff" stroke-width="4" />
+  <path d="M 195,192 L 195,225 Q 250,245 305,225 L 305,192 Q 250,210 195,192 Z" fill="#0d3b66" />
+  <circle cx="250" cy="180" r="6" fill="#ee964b" />
+  <path d="M 250,180 L 190,195 L 190,225" stroke="#ee964b" stroke-width="3.5" fill="none" stroke-linecap="round" />
+  <rect x="186" y="225" width="8" height="12" rx="1.5" fill="#ee964b" />
+
+  <!-- Stack of Books -->
+  <path d="M 180,235 Q 250,255 320,235 L 320,250 Q 250,270 180,250 Z" fill="#0d3b66" />
+  <path d="M 180,250 Q 250,270 320,250 L 315,260 Q 250,280 185,260 Z" fill="#ffffff" stroke="#0d3b66" stroke-width="2.5" />
+  <path d="M 165,260 Q 250,285 335,260 L 335,275 Q 250,300 165,275 Z" fill="#ee964b" stroke="#0d3b66" stroke-width="2" />
+  <path d="M 165,275 Q 250,300 335,275 L 330,285 Q 250,310 170,285 Z" fill="#ffffff" stroke="#0d3b66" stroke-width="2.5" />
+
+  <!-- Brand Name "CracEx" -->
+  <text x="245" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="68" fill="#0d3b66" text-anchor="middle" letter-spacing="-3">CracEx</text>
+
+  <!-- Orange Asterisk next to "x" -->
+  <g transform="translate(365, 332) scale(1.3)">
+    <path d="M -2,-12 L 2,-12 L 2,-4 L 10,-8 L 12,-4 L 4,1 L 9,8 L 5,11 L 0,4 L -5,11 L -9,8 L -4,1 L -12,-4 L -10,-8 L -2,-4 Z" fill="#ee964b" />
+  </g>
+
+  <!-- Motto path -->
+  <path id="bottom-text-path" d="M 100,380 A 205,205 0 0 0 400,380" fill="none" />
+
+  <!-- Motto text -->
+  <text fill="#0d3b66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="22" letter-spacing="4">
+    <textPath href="#bottom-text-path" startOffset="50%" text-anchor="middle">
+      CRACK YOUR EXAM WITH US
+    </textPath>
+  </text>
+</svg>

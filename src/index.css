@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cracex-blue: #0d3b66;
+  --color-cracex-blue-dark: #0a2e50;
+  --color-cracex-orange: #ee964b;
+  --color-cracex-orange-hover: #d8843c;
+  --color-cracex-orange-light: #f4d35e;
+}
+
+/* Custom Scrollbar for the Job Notifications */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

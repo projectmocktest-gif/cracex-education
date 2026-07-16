@@ -1,0 +1,6 @@
+{
+  "name": "CracEx Institute",
+  "description": "Modern, fully responsive single-page website for CracEx, a premier coaching institute for competitive government exams based in Asansol.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
