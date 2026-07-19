@@ -75,7 +75,11 @@ export function AppPromo() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-cracex-blue rounded-b-xl z-20"></div>
                 
                 {/* App Mockup UI (Simulated) */}
-                <div className="absolute inset-0 bg-slate-50 flex flex-col pt-8 px-4 pb-4 select-none">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-slate-50 flex flex-col pt-8 px-4 pb-4 select-none">
+                  {/* Background Accents */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-cracex-orange/5 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                  <div className="absolute bottom-20 left-0 w-24 h-24 bg-cracex-blue/5 rounded-full blur-xl -ml-10 pointer-events-none"></div>
+                  
                   {/* Top Status Bar & Header */}
                   <div className="flex justify-between items-center mb-3">
                     <div className="flex items-center gap-1.5">

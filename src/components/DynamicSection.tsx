@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Bell, ChevronRight, Briefcase, Landmark, Train, PiggyBank, ShieldCheck, BookOpen, Users, Map } from 'lucide-react';
 import { MOCK_JOBS, COURSES } from '../data';
 import { JobNotification } from '../types';
+import { SyllabusModal } from './SyllabusModal';
 
 // Map icon strings to actual Lucide components
 const IconMap: Record<string, React.ElementType> = {
@@ -19,6 +20,15 @@ const IconMap: Record<string, React.ElementType> = {
 export function DynamicSection() {
   const [jobs, setJobs] = useState<JobNotification[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSyllabusModalOpen, setIsSyllabusModalOpen] = useState(false);
+  const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
+
+  const handleCourseClick = (courseId: string) => {
+    if (courseId === 'icds' || courseId === 'panchayat') {
+      setSelectedCourseId(courseId);
+      setIsSyllabusModalOpen(true);
+    }
+  };
 
   // Simulate fetching data from a Google Sheet Web App endpoint
   useEffect(() => {
@@ -111,6 +121,7 @@ export function DynamicSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {COURSES.map((course, index) => {
                 const IconComponent = IconMap[course.iconName];
+                const isClickable = course.id === 'icds' || course.id === 'panchayat';
                 return (
                   <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -118,7 +129,8 @@ export function DynamicSection() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
                     key={course.id}
-                    className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 group flex items-start gap-4"
+                    onClick={() => handleCourseClick(course.id)}
+                    className={`bg-white p-4 rounded-xl border border-slate-200 shadow-sm transition-all duration-300 group flex items-start gap-4 ${isClickable ? 'cursor-pointer hover:border-cracex-orange hover:shadow-md' : 'hover:shadow-md'}`}
                   >
                     <div className="text-cracex-orange group-hover:text-cracex-orange-hover transition-colors duration-300 flex-shrink-0 mt-1">
                       {IconComponent && <IconComponent size={24} />}
@@ -130,6 +142,11 @@ export function DynamicSection() {
                       <p className="text-xs text-slate-500 leading-relaxed">
                         {course.shortDesc}
                       </p>
+                      {isClickable && (
+                        <span className="text-[10px] text-cracex-orange font-bold uppercase mt-2 inline-block">
+                          View Syllabus &rarr;
+                        </span>
+                      )}
                     </div>
                   </motion.div>
                 );
@@ -146,6 +163,11 @@ export function DynamicSection() {
 
         </div>
       </div>
+      <SyllabusModal 
+        isOpen={isSyllabusModalOpen} 
+        onClose={() => setIsSyllabusModalOpen(false)} 
+        courseId={selectedCourseId} 
+      />
     </section>
   );
 }
