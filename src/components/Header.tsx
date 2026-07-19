@@ -17,7 +17,7 @@ export function Header({ onLoginClick }: HeaderProps) {
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 cursor-pointer">
-            <img src="/logo.svg" alt="CracEx Logo" className="w-12 h-12 object-contain bg-white rounded-full p-1 shadow-sm" referrerPolicy="no-referrer" />
+            <img src="/logo.svg" alt="CracEx Logo" className="w-12 h-12 object-contain" referrerPolicy="no-referrer" />
             <div className="hidden sm:block">
               <h1 className="text-2xl font-black tracking-tight leading-none text-white">CRACEX</h1>
               <span className="text-[10px] uppercase tracking-widest text-white/80">Asansol Branch</span>

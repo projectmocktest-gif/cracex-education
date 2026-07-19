@@ -77,7 +77,7 @@ export function AppPromo() {
                 {/* App Mockup UI (Simulated) */}
                 <div className="absolute inset-0 bg-slate-50 flex flex-col pt-8 px-4 pb-4">
                   <div className="flex justify-between items-center mb-6">
-                    <img src="/logo.svg" alt="CracEx Logo" className="w-8 h-8 object-contain bg-white rounded-full p-0.5 shadow-sm" referrerPolicy="no-referrer" />
+                    <img src="/logo.svg" alt="CracEx Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" />
                     <div className="flex space-x-1">
                       <div className="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
                       <div className="w-1.5 h-1.5 rounded-full bg-slate-300"></div>

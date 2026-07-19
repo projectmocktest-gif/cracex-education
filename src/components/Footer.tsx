@@ -12,7 +12,7 @@ export function Footer() {
           {/* Brand Col */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.svg" alt="CracEx Logo" className="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-sm" referrerPolicy="no-referrer" />
+              <img src="/logo.svg" alt="CracEx Logo" className="w-10 h-10 object-contain" referrerPolicy="no-referrer" />
               <span className="text-xl font-black text-cracex-blue tracking-tight leading-none">CRACEX</span>
             </div>
             <p className="text-xs text-slate-500 mb-6 leading-relaxed">
