@@ -48,7 +48,7 @@ export function AppPromo() {
                   <div>
                     <h4 className="text-base sm:text-lg font-bold mb-1 text-cracex-blue uppercase">Live Online Classes</h4>
                     <p className="text-sm text-cracex-blue/90 font-medium">
-                      Interactive live sessions conducted via Google Meet. Seamlessly integrated for registered students using secure Google Workspace/Gmail IDs.
+                      Interactive live sessions seamlessly integrated for registered students.
                     </p>
                   </div>
                 </div>

@@ -73,19 +73,11 @@ export function Footer() {
 
         </div>
 
-        <div className="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-center items-center gap-4">
           <div className="text-[10px] text-slate-400 font-medium text-center md:text-left">
             &copy; {currentYear} CracEx Asansol. All Rights Reserved. 
             <span className="mx-2 hidden md:inline">|</span>
             <span className="block md:inline mt-1 md:mt-0">Crack Your Exam With Us!</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-[10px] text-slate-400 font-medium">Online classes via <span className="text-slate-800">Google Meet</span></span>
-            <div className="flex gap-1.5">
-              <div className="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
-              <div className="w-3.5 h-3.5 bg-red-600 rounded-full"></div>
-              <div className="w-3.5 h-3.5 bg-green-500 rounded-full"></div>
-            </div>
           </div>
         </div>
       </div>
