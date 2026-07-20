@@ -4,6 +4,7 @@ import { Bell, ChevronRight, Briefcase, Landmark, Train, PiggyBank, ShieldCheck,
 import { MOCK_JOBS, COURSES } from '../data';
 import { JobNotification } from '../types';
 import { SyllabusModal } from './SyllabusModal';
+import { ContactModal } from './ContactModal';
 
 // Map icon strings to actual Lucide components
 const IconMap: Record<string, React.ElementType> = {
@@ -22,11 +23,20 @@ export function DynamicSection() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSyllabusModalOpen, setIsSyllabusModalOpen] = useState(false);
   const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const handleCourseClick = (courseId: string) => {
     if (courseId === 'icds' || courseId === 'panchayat') {
       setSelectedCourseId(courseId);
       setIsSyllabusModalOpen(true);
+    }
+  };
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const isMobileDevice = window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobileDevice) {
+      e.preventDefault();
+      setIsContactModalOpen(true);
     }
   };
 
@@ -154,7 +164,11 @@ export function DynamicSection() {
             </div>
             
             <div className="mt-8 text-center sm:text-left">
-              <a href="tel:7501409423" className="inline-flex items-center justify-center gap-2 text-cracex-blue font-bold hover:text-cracex-orange transition-colors group text-sm">
+              <a 
+                href="tel:7501409423" 
+                onClick={handleContactClick}
+                className="inline-flex items-center justify-center gap-2 text-cracex-blue font-bold hover:text-cracex-orange transition-colors group text-sm"
+              >
                 Download detailed syllabus & fee structure 
                 <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -167,6 +181,10 @@ export function DynamicSection() {
         isOpen={isSyllabusModalOpen} 
         onClose={() => setIsSyllabusModalOpen(false)} 
         courseId={selectedCourseId} 
+      />
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
       />
     </section>
   );
